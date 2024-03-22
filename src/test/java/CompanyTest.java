@@ -26,7 +26,7 @@ public class CompanyTest {
         healthplan = new Healthplan(1, "A Sigorta", Plan.BASIC);
         String[] healthplans = new String[2];
         healthplans[0] = healthplan.getName();
-        employee = new Employee(1, "John Doe", "jd@test.com", "1234", healthplans);
+        employee = new Employee(1, "John Doe", "jd@test.com");
 
         String[] employees = new String[2];
         employees[0] = employee.getFullName();
