@@ -1,31 +1,37 @@
 package org.example;
 
 
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-
+       x();
 
     }
     public static void x(){
-        Company company=new Company(1,"Tek Company",1000000,new String[10]);
-        Employee employee=new Employee(1,"Semra Elçelik","324Qgmai.com","1231dfdf");
-        Healthplan healthPlan1=new Healthplan(1,"1.Health plan",Plan.BASIC);
-        Healthplan healthPlan2=new Healthplan(2,"2.Health plan",Plan.MID);
+
+        Company company = new Company(1, "Tek Company.", 50000, new String[15]);
 
 
-        //Çalışana sağlık planı ekleme
-        employee.addHealthPlan(0,"1.Health plan");
-        employee.addHealthPlan(1,"2.Health plan");
-
-        //Yazılımcı ekleme
-
-        company.addEmployee(0,"Semra Elçelik");
-        company.addEmployee(1,"Gizem Ayaz");
-        company.addEmployee(2,"Semra Elçelik");
+        Employee employee = new Employee(1, "Semra Elçelik", "bshbdhcbs.com", "passwrd",new String[4]);
 
 
+        Healthplan healthplan = new Healthplan(1, "Health Plan ", Plan.BASIC);
+
+
+        employee.addHealthPlan(0, "new Health Plan ");
+
+
+        company.addEmployee(0, "Nehir Elçelik");
+
+        // ToString metotları çağrılıyor
         System.out.println(company);
+        System.out.println(employee);
+        System.out.println(healthplan);
+
+
     }
 
-
 }
+
+

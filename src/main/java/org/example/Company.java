@@ -36,7 +36,7 @@ public class Company {
     }
 
     public void setGiro(double giro) {
-        this.giro = giro;
+        this.giro = giro<0?0:giro;
     }
 
     public String[] getDeveloperNames() {
@@ -48,14 +48,26 @@ public class Company {
     }
 
     public void addEmployee(int index,String name){
-        if(Arrays.binarySearch(developerNames,developerNames[index])>0){
-            System.out.println("Bu kiş var.");
-        } else if (this.developerNames[index] != null) {
-            System.out.println("Burası dolu.");
+
+        if(index<0|| index>=developerNames.length){
+            System.out.println("İnvalid index: "+ index);
         }
         else{
-            this.developerNames[index]=name;
+            if (developerNames[index]==null) {
+                this.developerNames[index]=name;
+            }
+            else{
+                System.out.println("İlgili index dolu:"+ index);
+            }
         }
+//        if(Arrays.binarySearch(developerNames,developerNames[index])>0){
+//            System.out.println("Bu kiş var.");
+//        } else if (this.developerNames[index] != null) {
+//            System.out.println("Burası dolu.");
+//        }
+//        else{
+//            this.developerNames[index]=name;
+//        }
     }
     @Override
     public String toString() {
